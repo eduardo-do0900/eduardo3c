@@ -1,35 +1,44 @@
 const startButton = document.getElementById('startButton');
 const settingsButton = document.getElementById('settingsButton');
 const settingsMenu = document.getElementById('settingsMenu');
-const screenButton = document.getElementById('screenButton');
-const graphicsButton = document.getElementById('graphicsButton');
-const audioButton = document.getElementById('audioButton');
-const backButton = document.getElementById('backButton');
+const difficultyMenu = document.getElementById('difficultyMenu');
+const easyButton = document.getElementById('easyButton');
+const mediumButton = document.getElementById('mediumButton');
+const hardButton = document.getElementById('hardButton');
+const backToMainMenuButton = document.getElementById('backToMainMenuButton');
+const backToMainMenuFromSettingsButton = document.getElementById('backToMainMenuFromSettingsButton');
 
 startButton.addEventListener('click', () => {
-  console.log('Jogo iniciado!');
-  // Adicione aqui o código para iniciar o jogo
+  menu.style.display = 'none';
+  difficultyMenu.style.display = 'block';
 });
 
 settingsButton.addEventListener('click', () => {
+  menu.style.display = 'none';
   settingsMenu.style.display = 'block';
 });
 
-screenButton.addEventListener('click', () => {
-  console.log('Configurações de tela abertas!');
-  // Adicione aqui o código para abrir as configurações de tela
+easyButton.addEventListener('click', () => {
+  console.log('Dificuldade: Fácil');
+  // Adicione aqui o código para iniciar o jogo com a dificuldade fácil
 });
 
-graphicsButton.addEventListener('click', () => {
-  console.log('Configurações de gráficos abertas!');
-  // Adicione aqui o código para abrir as configurações de gráficos
+mediumButton.addEventListener('click', () => {
+  console.log('Dificuldade: Médio');
+  // Adicione aqui o código para iniciar o jogo com a dificuldade média
 });
 
-audioButton.addEventListener('click', () => {
-  console.log('Configurações de áudio abertas!');
-  // Adicione aqui o código para abrir as configurações de áudio
+hardButton.addEventListener('click', () => {
+  console.log('Dificuldade: Difícil');
+  // Adicione aqui o código para iniciar o jogo com a dificuldade difícil
 });
 
-backButton.addEventListener('click', () => {
+backToMainMenuButton.addEventListener('click', () => {
+  difficultyMenu.style.display = 'none';
+  menu.style.display = 'block';
+});
+
+backToMainMenuFromSettingsButton.addEventListener('click', () => {
   settingsMenu.style.display = 'none';
+  menu.style.display = 'block';
 });

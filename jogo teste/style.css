@@ -29,6 +29,6 @@ body {
     cursor: pointer;
   }
   
-  #settingsMenu {
+  #settingsMenu, #difficultyMenu {
     display: none;
   }
